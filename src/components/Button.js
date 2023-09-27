@@ -1,4 +1,4 @@
-import { StyleSheet, TouchableOpacity, Text } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 
 export default function MyButton({title, action}) {
   return (
@@ -12,9 +12,9 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     backgroundColor: '#0072E1',
-    width: '70%',
+    width: '15%',
     borderRadius: 8,
-    marginTop: 6
+    marginTop: 10
   },
   label: {
     fontWeight: 'bold',

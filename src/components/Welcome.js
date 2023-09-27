@@ -1,8 +1,8 @@
 import { StyleSheet, Text } from "react-native";
 
-export default function Welcome(props) {
+export default function Welcome( {text} ) {
   return (
-    <Text style={styles.label}>{props.text}</Text>
+    <Text style={styles.label}>{text}</Text>
   );
 }
 
@@ -10,6 +10,6 @@ const styles = StyleSheet.create({
   label: {
     fontWeight: 'bold',
     fontSize: 16,
-    marginBottom: 40
+    marginBottom: 20
   }
 });

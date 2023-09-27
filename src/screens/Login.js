@@ -23,11 +23,13 @@ export default function Login() {
   return (
     <View style={styles.container}>
       <Logo></Logo>
-      <Welcome text="Informe os dados para entrar!"></Welcome>
-      <TextInput style={styles.input} value={username} onChangeText={setUsername}></TextInput>
-      <TextInput style={styles.input} secureTextEntry={true} value={password} onChangeText={setPassword}></TextInput>
-      <MyButton title="Entrar" action={login}></MyButton>
-      <MyButton title="Registrar" action={register}></MyButton>
+      <Welcome text="Sign in"></Welcome>
+      <TextInput style={styles.input} placeholder="E-mail" value={username} onChangeText={setUsername}></TextInput>
+      <TextInput style={styles.input} placeholder="Password" secureTextEntry={true} value={password} onChangeText={setPassword}></TextInput>
+      <View style={styles.divButton}>
+        <MyButton title="Entrar" action={login}></MyButton>
+        <MyButton title="Registrar" action={register}></MyButton>
+      </View>
       <Text style={styles.label}>Não tem conta? Clique aqui</Text>
       <StatusBar style="auto" />
     </View>
@@ -42,16 +44,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   input: {
-    borderWidth: 0.5,
-    width: '70%',
+    borderBottomWidth: 0.5,
+    width: '50%',
     height: 40,
-    borderRadius: 8,
     paddingLeft: 6,
-    marginTop: 6
+    marginTop: 6,
   },
   label: {
     fontSize: 16,
     marginTop: 40,
+  },
+  divButton: {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+    marginTop: 20,
   },
   company: {
     position: 'absolute',
